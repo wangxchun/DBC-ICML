@@ -1,0 +1,50 @@
+project: "DBC-ICLR"
+program: dbc/main.py
+method: grid
+name: "HalfCheetah-v3_dbc"
+
+parameters:
+  seed:
+    values: [1, 2, 3]
+  prefix:
+    value: "dbc"
+  alg:
+    value: "dbc"
+  traj-load-path:
+    value: "./expert_datasets/halfcheetah_5trajs_processed.pt"
+  ddpm-path:
+    value: "./halfcheetah_5trajs_processed_ddpm.pt"
+  env-name:
+    value: "HalfCheetah-v3"
+  normalize-env:
+    value: False
+  bc-num-epochs:
+    value: 1000
+  eval-num-processes:
+    value: 10
+  cuda:
+    value: True
+  num-render:
+    value: 0
+  num-eval:
+    value: 10
+  vid-fps:
+    value: 100
+  lr:
+    value: 0.0001
+  log-interval:
+    value: 200
+  save-interval:
+    value: 100000
+  eval-interval:
+    value: 1000
+  bc-state-norm:
+    value: True
+  clip-actions:
+    value: True
+  coeff:
+    value: 0.2
+  fix-step-when-get-loss:
+    value: True
+  fix-which-step-when-get-loss:
+    value: 249

@@ -1,0 +1,15 @@
+/data
+/wandb
+/experiments
+/rl-toolkit/dm_backup
+/configs_backup
+/expert_datasets_backup
+*.pyc
+*.mp4
+*.pt
+<<<<<<< HEAD
+*.png
+*.sh
+=======
+/rl-toolkit/dm/trained_imgs/*
+>>>>>>> 759d2a1dc13342aa890ef4f548f2cb13d2815a38

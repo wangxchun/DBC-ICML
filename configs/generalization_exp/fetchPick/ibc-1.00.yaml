@@ -1,0 +1,54 @@
+project: 'diffusion'
+program: dbc/main.py
+method: grid
+name: Pick-ibc-1.00
+
+parameters:
+  seed:
+    values: [1, 2, 3]
+  prefix:
+    value: "ibc"
+  alg:
+    value: "ibc"
+  traj-load-path:
+    value: "./expert_datasets/pick_10000_clip.pt"
+  env-name:
+    value: "FetchPickAndPlaceDiffHoldout-v0"
+  normalize-env:
+    value: False
+  bc-num-epochs:
+    value: 15000
+  eval-num-processes:
+    value: 1
+  cuda:
+    value: True
+  num-process:
+    value: 10
+  num-render:
+    value: 0
+  num-eval:
+    value: 100
+  lr:
+    value: 0.000005
+  log-interval:
+    value: 1000
+  save-interval:
+    value: 50000
+  eval-interval:
+    value: 4000
+  bc-state-norm:
+    value: True
+  clip-actions:
+    value: True
+  stochastic-optimizer-train_samples:
+    value: 256
+  traj-batch-size:
+    value: 512
+  hidden-dim:
+    value: 1024
+  depth:
+    value: 1
+  noise-ratio: 
+    value: 1.00
+  goal-noise-ratio:
+    value: 1.00

@@ -1,0 +1,51 @@
+project: 'diffusion'
+program: dbc/main.py
+method: grid
+name: Hand-ibc
+parameters:
+  alg:
+    value: ibc
+  bc-num-epochs:
+    value: 15000
+  bc-state-norm:
+    value: true
+  clip-actions:
+    value: true
+  cuda:
+    value: true
+  depth:
+    value: 1
+  env-name:
+    value: CustomHandManipulateBlockRotateZ-v2
+  eval-interval:
+    value: 3000
+  eval-num-processes:
+    value: 10
+  hidden-dim:
+    value: 512
+  log-interval:
+    value: 1000
+  lr:
+    value: 1e-05
+  normalize-env:
+    value: false
+  num-eval:
+    value: 10
+  num-process:
+    value: 10
+  num-render:
+    value: 0
+  prefix:
+    value: ibc
+  save-interval:
+    value: 500000
+  seed:
+    values: [1, 2, 3]
+  stochastic-optimizer-train_samples:
+    value: 256
+  traj-batch-size:
+    value: 512
+  traj-load-path:
+    value: ./expert_datasets/hand_10000_v2.pt
+  vid-fps:
+    value: 10

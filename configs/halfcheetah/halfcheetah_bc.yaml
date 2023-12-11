@@ -1,0 +1,42 @@
+project: "dbc_rebuttal"
+program: dbc/main.py
+method: grid
+name: "HalfCheetah-v3_bc"
+
+parameters:
+  seed:
+    values: [1, 2, 3]
+  prefix:
+    value: "bc"
+  alg:
+    value: "bc"
+  traj-load-path:
+    value: "./expert_datasets/halfcheetah_5trajs_processed.pt"
+  env-name:
+    value: "HalfCheetah-v3"
+  normalize-env:
+    value: False
+  bc-num-epochs:
+    value: 1000
+  eval-num-processes:
+    value: 10
+  cuda:
+    value: True
+  num-render:
+    value: 0
+  num-eval:
+    value: 10
+  vid-fps:
+    value: 100
+  lr:
+    value: 0.0001
+  log-interval:
+    value: 200
+  save-interval:
+    value: 100000
+  eval-interval:
+    value: 1000
+  bc-state-norm:
+    value: True
+  clip-actions:
+    value: True

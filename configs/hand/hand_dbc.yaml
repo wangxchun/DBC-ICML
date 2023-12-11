@@ -1,0 +1,52 @@
+project: 'diffusion'
+program: dbc/main.py
+method: grid
+name: Hand-dbc
+
+parameters:
+  seed:
+    values: [1, 2, 3]
+  prefix:
+    value: "dbc"
+  alg:
+    value: "dbc"
+  traj-load-path:
+    value: "./expert_datasets/hand_10000_v2.pt"
+  ddpm-path:
+    value: "hand_10000_v2_ddpm.pt"
+  env-name:
+    value: "CustomHandManipulateBlockRotateZ-v2"
+  coeff:
+    value: 1
+  coeff-bc:
+    value: 1
+  normalize-env:
+    value: False
+  bc-num-epochs:
+    value: 5000
+  eval-num-processes:
+    value: 1
+  cuda:
+    value: True
+  num-render:
+    value: 0
+  num-eval:
+    value: 100
+  vid-fps:
+    value: 10
+  lr:
+    value: 0.0001
+  log-interval:
+    value: 1000
+  save-interval:
+    value: 100000
+  eval-interval:
+    value: 3000
+  bc-state-norm:
+    value: True
+  clip-actions:
+    value: True
+  hidden-dim:
+    value: 2048
+  depth:
+    value: 2

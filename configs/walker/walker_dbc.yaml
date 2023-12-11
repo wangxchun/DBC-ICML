@@ -1,0 +1,58 @@
+project: 'DBC-ICLR'
+program: dbc/main.py
+method: grid
+name: 'walker_dbc'
+
+parameters:
+  seed:
+    values: [1, 2, 3]
+  prefix:
+    value: "dbc"
+  alg:
+    value: "dbc"
+  traj-load-path:
+    value: "./expert_datasets/walker_5traj_processed.pt"
+  ddpm-path:
+    value: "/home/mhhsu/dbc-private/rl-toolkit/dm/trained_models/walker_5traj_processed_ddpm_1e-5.pt"
+  env-name:
+    value: "Walker2d-v3"
+  normalize-env:
+    value: False
+  bc-num-epochs:
+    value: 1000
+  eval-num-processes:
+    value: 10
+  cuda:
+    value: True
+  num-render:
+    value: 0
+  num-eval:
+    value: 10
+  vid-fps:
+    value: 100
+  lr:
+    value: 0.000001
+  log-interval:
+    value: 200
+  save-interval:
+    value: 100000
+  eval-interval:
+    value: 1000
+  bc-state-norm:
+    value: True
+  clip-actions:
+    value: True
+  coeff:
+    value: 10
+  depth:
+    value: 4
+  hidden-dim:
+    value: 1024
+  il-in-action-norm:
+    value: True
+  il-out-action-norm:
+    value: True
+  # fix-step-when-get-loss:
+  #   value: True
+  # fix-which-step-when-get-loss:
+  #   value: 249

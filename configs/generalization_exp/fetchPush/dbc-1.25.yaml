@@ -1,0 +1,65 @@
+project: 'diffusion'
+program: dbc/main.py
+method: grid
+name: Push-dbc-1.25-sigmoid-final
+
+parameters:
+  seed:
+    values: [1, 2, 3]
+    # value: 1
+  prefix:
+    value: "dbc"
+  alg:
+    value: "dbc"
+  traj-load-path:
+    value: "./expert_datasets/push_10000_clip.pt"
+  ddpm-path:
+    value: "./rl-toolkit/dm/trained_models/push_10000_clip_ddpm_1e-05_sigmoid.pt"
+  coeff:
+    value: 1
+  coeff-bc:
+    value: 1
+  env-name:
+    value: "FetchPushEnvCustom-v0"
+  normalize-env:
+    value: False
+  bc-num-epochs:
+    value: 5000
+  eval-num-processes:
+    value: 10
+  cuda:
+    value: True
+  num-render:
+    value: 0
+  num-eval:
+    value: 10
+  vid-fps:
+    value: 100
+  lr:
+    value: 0.000001
+  log-interval:
+    value: 2000
+  save-interval:
+    value: 100000
+  eval-interval:
+    value: 4000
+  bc-state-norm:
+    value: True
+  clip-actions:
+    value: True
+  hidden-dim:
+    value: 512
+  depth:
+    value: 4
+  num-units:
+    value: 1024
+  ddpm-depth:
+    value: 4
+  scheduler-type:
+    value: "sigmoid"
+  max-grad-norm:
+    value: -1
+  noise-ratio: 
+    value: 1.25
+  goal-noise-ratio:
+    value: 1.25

@@ -1,0 +1,54 @@
+project: "diffusion"
+program: dbc/main.py
+method: grid
+name: "AntGoal-v0_ibc"
+
+parameters:
+  seed:
+    values: [1, 2, 3]
+  prefix:
+    value: "ibc"
+  alg:
+    value: "ibc"
+  traj-load-path:
+    value: "/home/mhhsu/dbc-private/expert_datasets/ant_25000.pt"
+  env-name:
+    value: "AntGoal-v0"
+  normalize-env:
+    value: False
+  bc-num-epochs:
+    value: 28000
+  eval-num-processes:
+    value: 10
+  cuda:
+    value: True
+  num-eval:
+    value: 10
+  num-render:
+    value: 0
+  vid-fps:
+    value: 100
+  lr:
+    value: 0.0001
+  log-interval:
+    value: 200
+  save-interval:
+    value: 100000
+  eval-interval:
+    value: 4000
+  clip-actions:
+    value: True
+  hidden-dim:
+    value: 1200
+  depth:
+    value: 1
+  bc-state-norm:
+    value: False
+  il-in-action-norm:
+    value: False
+  il-out-action-norm:
+    value: False
+  ant-noise:
+    value: 0.01
+  traj-frac:
+    value: 1

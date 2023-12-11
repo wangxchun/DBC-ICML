@@ -1,0 +1,50 @@
+project: "dbc_rebuttal"
+program: dbc/main.py
+method: grid
+name: "Maze_dp_75"
+
+parameters:
+  seed:
+    values: [1, 2, 3]
+  prefix:
+    value: "dp"
+  alg:
+    value: "dp"
+  normalize-env:
+    value: False
+  bc-num-epochs:
+    value: 20000
+  traj-load-path:
+    value: "./expert_datasets/maze2d_075.pt"
+  env-name:
+    value: "maze2d-medium-v2"
+  eval-num-processes:
+    value: 20
+  num-eval:
+    value: 5
+  cuda:
+    value: True
+  num-render:
+    value: 0
+  vid-fps:
+    value: 30
+  lr:
+    value: 0.0002
+  log-interval:
+    value: 5000
+  save-interval:
+    value: 100000
+  eval-interval:
+    value: 37000
+  clip-actions:
+    value: True
+  hidden-dim:
+    value: 256
+  depth:
+    value: 4
+  bc-state-norm:
+    value: False
+  il-in-action-norm:
+    value: False
+  il-out-action-norm:
+    value: False
